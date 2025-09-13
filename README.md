@@ -17,7 +17,6 @@
 - [Configurazione degli account](#configurazione-degli-account)
 - [Utilizzo](#utilizzo)
 - [Logica dei calcoli](#logica-dei-calcoli)
-- [Integrazione con MetaTrader 5](#integrazione-con-metatrader-5)
 - [Sicurezza e privacy](#sicurezza-e-privacy)
 - [Troubleshooting](#troubleshooting)
 
@@ -111,4 +110,47 @@ Il file `accounts.json` salva le credenziali **in chiaro** (solo in locale).
   ]
 }
 ```
+Compila le password e verifica i percorsi **mt5_path**.
+Prop e Broker devono puntare a istanze diverse di MetaTrader 5.
 
+## Utilizzo
+
+1. Avvia entrambi gli MT5 e fai login (Prop e Broker).
+2. Avvia l’app
+3. Login:
+  - PROP: inserisci login, server, password, path → Login
+  - BROKER: stesso procedimento
+4. Inserisci:
+  - Simbolo Prop / Simbolo Broker
+  - Costo Prop ($)
+  - Dimensione (10k–500k)
+  - Fasi (1/2)
+  - Target %, Max DD %, Target per operazione (punti e %)
+5. Clicca **Calcola** per ottenere:
+  - Rapporto target/DD
+  - SL operazione singola (punti)
+  - Numero operazioni
+  - Lotti Prop, Target/SL Prop ($ e %)
+  - Commissioni stimate, deposito Broker
+  - Target/SL Broker (punti e $), lotti Broker
+
+### BUY / SELL
+- **Prop**: apre nella direzione richiesta (TP/SL calcolati da punti → prezzo)
+- **Broker**: apre nella direzione opposta (hedge)
+- **Monitor automatico**: Se la Prop non ha più posizioni aperte, il sistema chiude tutte le posizioni su Broker.
+- **Chiudi ordini**: pulsante che appena premuto chiude tutte le posizioni su Prop e Broker.
+
+## Logica dei calcoli
+Le formule principali sono contenute in **app.py::calculate_outputs**
+**Nota**: I lotti Broker sono arrotondati alla seconda/terza cifra decimale
+
+## Sicurezza e privacy
+- **accounts.json** contiene password in chiaro:
+- Implementare cifratura locale (es. **DPAPI**, **Keyring**) per future versioni
+
+## Troubleshooting
+- **Login MT5 fallito**: verifica **mt5_path**, credenziali, server, avvio in portable, permessi cartella
+- **symbol_info è None**: aggiungi il simbolo al Market Watch e abilitalo
+- **order_send retcode != DONE**: controlla spread, deviation, orari mercato, regole di esecuzione (**FOK/IOC/RETURN/BOC**)
+- **Permessi**: inizializzazione spesso fallisce per permessi insufficienti su cartelle MT5
+- **Doppia istanza**: verifica che Prop punti a **MetaTrader 5** e Broker a **MetaTrader 5_1** con relativi **mt5_path**
