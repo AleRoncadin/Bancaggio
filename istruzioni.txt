@@ -1,0 +1,12 @@
+ISTRUZIONI:
+
+Fare una copia della cartella di MT5: ad esempio, se hai come percorso 
+"C:\Program Files\MetaTrader 5" fai una nuova copia quindi avrai 
+"C:\Program Files\MetaTrader 5_1".
+
+Sia nella cartella originale "MetaTrader 5" che "MetaTrader 5_1" andare  in 
+Proprietà --> Sicurezza e per modificare le autorizzazioni di ogni utente/gruppo e 
+mettere "Controllo completo" e poi Applica.
+
+Avvia entrambi gli MT5 e fai l'accesso.
+Infine avvii l'app di bancaggio.

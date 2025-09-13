@@ -1,0 +1,36 @@
+{
+    "prop": [
+        {
+            "login": "1520607116",
+            "server": "FTMO-Demo2",
+            "password": "?7@It5uql?!H5r",
+            "mt5_path": "C:\\Program Files\\MetaTrader 5\\terminal64.exe"
+        },
+        {
+            "login": "5030661500",
+            "server": "MetaQuotes-Demo",
+            "password": "+3CtYbOu",
+            "mt5_path": "C:\\Program Files\\MetaTrader 5\\terminal64.exe"
+        }
+    ],
+    "broker": [
+        {
+            "login": "5032295218",
+            "server": "MetaQuotes-Demo",
+            "password": "_iAn3qBo",
+            "mt5_path": "C:\\Program Files\\MetaTrader 5_1\\terminal64.exe"
+        },
+        {
+            "login": "313117636",
+            "server": "XMGlobal-MT5 7",
+            "password": "ProvaProva1!",
+            "mt5_path": "C:\\Program Files\\MetaTrader 5_1\\terminal64.exe"
+        },
+        {
+            "login": "6064778",
+            "server": "ActivTradesMarkets-Server",
+            "password": "BCOnap1#",
+            "mt5_path": "C:\\Program Files\\MetaTrader 5_1\\terminal64.exe"
+        }
+    ]
+}
