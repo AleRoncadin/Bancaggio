@@ -139,8 +139,8 @@ Prop e Broker devono puntare a istanze diverse di MetaTrader 5.
   - **Chiudi ordini**: pulsante che appena premuto chiude tutte le posizioni su Prop e Broker.
 
 ## Logica dei calcoli
-Le formule principali sono contenute in **app.py::calculate_outputs**
-**Nota**: I lotti Broker sono arrotondati alla seconda/terza cifra decimale
+> Le formule principali sono contenute in **app.py::calculate_outputs**
+> **Nota**: I lotti Broker sono arrotondati alla seconda/terza cifra decimale
 
 ## Sicurezza e privacy
 - **accounts.json** contiene password in chiaro:
