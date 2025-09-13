@@ -23,7 +23,7 @@ class App:
     def __init__(self, master):
         App._instance = self
         self.master = master
-        master.title("Passaggio Prop")
+        master.title("Bancaggio")
         master.geometry("920x700")
 
         self.data = load_accounts()
@@ -531,3 +531,4 @@ class App:
         self.target_dollari_broker_label.config(text=f"{target_dollari_broker:.2f}")
         self.stoploss_dollari_broker_label.config(text=f"{stoploss_dollari_broker:.2f}")
         self.lottaggio_broker_label.config(text=f"{lottaggio_broker:.3f}")
+
