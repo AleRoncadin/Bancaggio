@@ -85,6 +85,8 @@
   - Crea un .exe one-file includendo Meta1/ e Meta2/
 - L'eseguibile sarà in **dist\main.exe**.
 
+---
+
 ## Configurazione e Utilizzo del Sistema Prop/Broker
 
 ### Configurazione degli account
@@ -117,6 +119,8 @@ Il file `accounts.json` salva le credenziali **in chiaro** (solo in locale).
 Compila le password e verifica i percorsi **mt5_path**.
 Prop e Broker devono puntare a istanze diverse di MetaTrader 5.
 
+---
+
 ## Utilizzo
 
 - Avvia entrambi gli MT5 e fai login (Prop e Broker).
@@ -145,13 +149,19 @@ Prop e Broker devono puntare a istanze diverse di MetaTrader 5.
   - **Monitor automatico**: Se la Prop non ha più posizioni aperte, il sistema chiude tutte le posizioni su Broker.
   - **Chiudi ordini**: pulsante che appena premuto chiude tutte le posizioni su Prop e Broker.
 
+---
+
 ## Logica dei calcoli
 Le formule principali sono contenute in **app.py::calculate_outputs**.
 **Nota**: I lotti Broker sono arrotondati alla seconda/terza cifra decimale
 
+---
+
 ## Sicurezza e privacy
 - **accounts.json** contiene password in chiaro:
 - Implementare cifratura locale (es. **DPAPI**, **Keyring**) per future versioni
+
+---
 
 ## Troubleshooting
 - **Login MT5 fallito**: verifica **mt5_path**, credenziali, server, avvio in portable, permessi cartella
