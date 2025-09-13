@@ -159,7 +159,7 @@ Le formule principali sono contenute in **app.py::calculate_outputs**.
 
 ## Sicurezza e privacy
 - **accounts.json** contiene password in chiaro:
-- Implementare cifratura locale (es. **DPAPI**, **Keyring**) per future versioni
+- Implementare cifratura locale per future versioni
 
 ---
 
