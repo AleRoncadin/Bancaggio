@@ -60,14 +60,12 @@
 
 ## Installazione e build (Windows)
 
-1. **Duplica MT5** (vedi `istruzioni.txt`)  
-   - Copia `C:\Program Files\MetaTrader 5` in `C:\Program Files\MetaTrader 5_1`.  
-   - Su **entrambe**: Proprietà → Sicurezza → **Controllo completo** → Applica.  
-   - Avvia **entrambi** i terminali e **fai login** ai rispettivi conti.
-
-2. **Clona la repository** e apri un **Prompt dei comandi** nella cartella del progetto.
-
-3. **Esegui**:
+- **Duplica MT5** (vedi `istruzioni.txt`)  
+  - Copia `C:\Program Files\MetaTrader 5` in `C:\Program Files\MetaTrader 5_1`.  
+  - Su **entrambe**: Proprietà → Sicurezza → **Controllo completo** → Applica.  
+  - Avvia **entrambi** i terminali e **fai login** ai rispettivi conti.
+- **Clona la repository** e apri un **Prompt dei comandi** nella cartella del progetto.
+- **Esegui**:
    ```bat
    install.bat
 
@@ -78,8 +76,7 @@
   - Verifica/installa pyinstaller
   - Pulisce build/ e dist/
   - Crea un .exe one-file includendo Meta1/ e Meta2/
-
-4. L'eseguibile sarà in **dist\main.exe**.
+- L'eseguibile sarà in **dist\main.exe**.
 
 ## Configurazione e Utilizzo del Sistema Prop/Broker
 
@@ -115,18 +112,18 @@ Prop e Broker devono puntare a istanze diverse di MetaTrader 5.
 
 ## Utilizzo
 
-1. Avvia entrambi gli MT5 e fai login (Prop e Broker).
-2. Avvia l’app
-3. Login:
+- Avvia entrambi gli MT5 e fai login (Prop e Broker).
+- Avvia l’app
+- Login:
   - PROP: inserisci login, server, password, path → Login
   - BROKER: stesso procedimento
-4. Inserisci:
+- Inserisci:
   - Simbolo Prop / Simbolo Broker
   - Costo Prop ($)
   - Dimensione (10k–500k)
   - Fasi (1/2)
   - Target %, Max DD %, Target per operazione (punti e %)
-5. Clicca **Calcola** per ottenere:
+- Clicca **Calcola** per ottenere:
   - Rapporto target/DD
   - SL operazione singola (punti)
   - Numero operazioni
@@ -137,8 +134,9 @@ Prop e Broker devono puntare a istanze diverse di MetaTrader 5.
 ### BUY / SELL
 - **Prop**: apre nella direzione richiesta (TP/SL calcolati da punti → prezzo)
 - **Broker**: apre nella direzione opposta (hedge)
-- **Monitor automatico**: Se la Prop non ha più posizioni aperte, il sistema chiude tutte le posizioni su Broker.
-- **Chiudi ordini**: pulsante che appena premuto chiude tutte le posizioni su Prop e Broker.
+- Chiusura ordini
+  - **Monitor automatico**: Se la Prop non ha più posizioni aperte, il sistema chiude tutte le posizioni su Broker.
+  - **Chiudi ordini**: pulsante che appena premuto chiude tutte le posizioni su Prop e Broker.
 
 ## Logica dei calcoli
 Le formule principali sono contenute in **app.py::calculate_outputs**
