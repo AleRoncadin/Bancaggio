@@ -12,6 +12,7 @@
 
 ## Indice
 - [Caratteristiche](#caratteristiche)
+- [UI](#UI)
 - [Requisiti](#requisiti)
 - [Installazione e build (Windows)](#installazione-e-build-windows)
 - [Configurazione degli account](#configurazione-degli-account)
@@ -41,6 +42,12 @@
 > import Meta1 as mt5_prop
 > ```
 > In questo modo le due sessioni MT5 mantengono **stato separato**.
+
+---
+
+## UI
+
+
 
 ---
 
