@@ -1,4 +1,4 @@
-# Bancaggio
+# Cross-Hedging Prop Firm
 
 > Sincronizza operazioni tra un **conto Prop Firm** e un **conto Reale** su **due istanze distinte di MetaTrader 5**.  
 > Aperture coordinate, chiusure di emergenza, calcoli automatici (lotti/target/stop) e packaging in eseguibile Windows.
